@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'HomePage.dart';
 
@@ -17,6 +18,8 @@ class _ProfilePageState extends State<ProfilePage> {
   Color highlight = Color.fromRGBO(77, 126, 250, 1);
   Color bound = Color.fromRGBO(188, 177, 177, 1);
   Color thick = Color.fromRGBO(4, 4, 4, 1);
+  Color vert = Color.fromRGBO(134, 138, 150, 1);
+  Color text = Color.fromRGBO(0, 0, 0, 0.7);
   double lineWidth = 4.0;
 
   @override
@@ -29,9 +32,9 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Text(
           'Profil Saya',
           style: TextStyle(
-            fontFamily: 'Montserrat-SemiBold',
+            fontFamily: 'Montserrat',
             color: thick,
-            fontSize: 28,
+            fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
         ),
@@ -77,15 +80,17 @@ class _ProfilePageState extends State<ProfilePage> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                                 fontFamily: 'Montserrat',
+                                color: text,
                               ),
                             ),
                             SizedBox(height: 2),
                             Text(
-                              'john.doe@example.com | +1234567890', // Replace with actual email
+                              'johndoe@gmail.com|0815124251828', 
                               style: TextStyle(
                                 fontSize: 12,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w700,
+                                color: text,
                               ),
                             ),
                           ],
@@ -117,7 +122,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: main,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -138,20 +143,24 @@ class _ProfilePageState extends State<ProfilePage> {
                         SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
                       ],
                     ),
-                    Divider(thickness: lineWidth, color: Colors.grey), // Add a vertical divider
+                    Divider(thickness: lineWidth, color: Colors.grey), 
+                      SizedBox(height: 5 ),
                     Text('Senior Flutter Developer', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
+                  SizedBox(height: 2 ),
                     Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
                     Text('Januari 2020 - Desember 2022', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
-                    SizedBox(height: 8),
+                    SizedBox(height: 10),
                     Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor. Donec convallis quam a dignissim pulvinar. Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem.',
                       style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500),
                     ),
                     Divider(thickness: lineWidth, color: Colors.grey),
+                    SizedBox(height: 5 ),
                     Text('Junior Flutter Developer', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
+                    SizedBox(height: 2 ),
                     Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
                     Text('Januari 2020 - Desember 2022', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
-                    SizedBox(height: 8),
+                    SizedBox(height: 10),
                     Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor. Donec convallis quam a dignissim pulvinar. Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem.',
                       style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500),
@@ -168,7 +177,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: main,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -185,13 +194,17 @@ class _ProfilePageState extends State<ProfilePage> {
                             fontFamily: 'Montserrat',
                           ),
                         ),
-                        SizedBox(width: 180),
+                        SizedBox(width: 190),
                         SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
                       ],
                     ),
                     Divider(thickness: lineWidth, color: Colors.grey), // Add a vertical divider
                     Text('S1 Teknik Informatika', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
-                    Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    SizedBox(height: 10),
+                    Text('Universitas Kita Ajah', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    SizedBox(height: 3),
+                     Text('Agustus 2013 - Desember 2017', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+
                   ],
                 ),
               ),
@@ -204,7 +217,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: main,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -221,7 +234,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             fontFamily: 'Montserrat',
                           ),
                         ),
-                        SizedBox(width: 180),
+                        SizedBox(width: 190),
                         SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
                       ],
                     ),

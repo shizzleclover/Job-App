@@ -19,7 +19,6 @@ class RegisterPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 50),
-              // Image placeholder for registration
               Center(
                 child: SizedBox(
                   width: 360,
