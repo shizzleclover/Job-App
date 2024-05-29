@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'HomePage.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -16,6 +16,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Color border = Color.fromRGBO(188, 177, 177, 1);
   Color highlight = Color.fromRGBO(77, 126, 250, 1);
   Color bound = Color.fromRGBO(188, 177, 177, 1);
+  Color thick = Color.fromRGBO(4, 4, 4, 1);
   double lineWidth = 4.0;
 
   @override
@@ -29,9 +30,9 @@ class _ProfilePageState extends State<ProfilePage> {
           'Profil Saya',
           style: TextStyle(
             fontFamily: 'Montserrat-SemiBold',
-            color: Colors.black,
-            fontSize: 30,
-            fontWeight: FontWeight.w800,
+            color: thick,
+            fontSize: 28,
+            fontWeight: FontWeight.w700,
           ),
         ),
         shape: Border(bottom: BorderSide(color: border, width: 2.0)),
@@ -45,8 +46,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Stack(
                   children: [
                     Container(
-                      width: 450, // Adjust the width as needed
-                      height: 200, // Adjust the height as needed
+                      width: 430, // Adjust the width as needed
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: main,
@@ -59,8 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
                             CircleAvatar(
                               radius: 50,
-                              backgroundImage:
-                                  AssetImage('Assets/Images/ProfilePic.png'),
+                              backgroundImage: AssetImage('Assets/Images/ProfilePic.png'),
                             ),
                             SizedBox(height: 8),
                             Text(
@@ -111,81 +110,124 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
             Container(
-              width: 450, // Set width to match the first container
-              height: 280,
+              width: 430, // Set width to match the first container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: main,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 0,
-                    top: 50,
-                    bottom: 50,
-                    child: Container(
-                      width: lineWidth,
-                      color: Colors.grey,
+              child: Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset('Assets/Icons/Case.svg', width: 35, height: 35),
+                        SizedBox(width: 10),
+                        Text(
+                          'Pengalaman Kerja',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 18,
+                            color: highlight,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                        SizedBox(width: 130),
+                        SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
+                      ],
                     ),
-                  ),
-                  Positioned(
-                    right: 0,
-                    top: 50,
-                    bottom: 50,
-                    child: Container(
-                      width: lineWidth,
-                      color: Colors.grey,
+                    Divider(thickness: lineWidth, color: Colors.grey), // Add a vertical divider
+                    Text('Senior Flutter Developer', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
+                    Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    Text('Januari 2020 - Desember 2022', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    SizedBox(height: 8),
+                    Text(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor. Donec convallis quam a dignissim pulvinar. Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem.',
+                      style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500),
                     ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text('First text in the second space'),
-                      Text('Second text in the second space'),
-                      Text('Third text in the second space'),
-                    ],
-                  ),
-                ],
+                    Divider(thickness: lineWidth, color: Colors.grey),
+                    Text('Junior Flutter Developer', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
+                    Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    Text('Januari 2020 - Desember 2022', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                    SizedBox(height: 8),
+                    Text(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in nisl dolor. Donec convallis quam a dignissim pulvinar. Nullam rhoncus elit a nisi elementum, sed luctus tortor porta. Etiam ac pellentesque lorem.',
+                      style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 10),
             Container(
-              width: 450, // Set width to match the first container
-              height: 100,
+              width: 430, // Set width to match the first container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: main,
               ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 0,
-                    top: 20,
-                    bottom: 20,
-                    child: Container(
-                      width: lineWidth,
-                      color: Colors.grey,
+              child: Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset('Assets/Icons/educate.svg', width: 35, height: 35),
+                        SizedBox(width: 10),
+                        Text(
+                          'Pendidikan',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 18,
+                            color: highlight,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                        SizedBox(width: 180),
+                        SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
+                      ],
                     ),
-                  ),
-                  Positioned(
-                    right: 0,
-                    top: 20,
-                    bottom: 20,
-                    child: Container(
-                      width: lineWidth,
-                      color: Colors.grey,
+                    Divider(thickness: lineWidth, color: Colors.grey), // Add a vertical divider
+                    Text('S1 Teknik Informatika', style: TextStyle(fontSize: 16, fontFamily: 'Montserrat', color: thick, fontWeight: FontWeight.w800)),
+                    Text('PT. Bangkit Bersama Kita', style: TextStyle(fontSize: 14, fontFamily: 'Montserrat', fontWeight: FontWeight.w500)),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              width: 430,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: main,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset('Assets/Icons/brain.svg', width: 35, height: 35),
+                        SizedBox(width: 10),
+                        Text(
+                          'Kemampuan',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 18,
+                            color: highlight,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                        SizedBox(width: 180),
+                        SvgPicture.asset('Assets/Icons/add.svg', width: 15, height: 15),
+                      ],
                     ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text('First text in the third space'),
-                      Text('Second text in the third space'),
-                    ],
-                  ),
-                ],
+                    Divider(thickness: lineWidth, color: Colors.grey), // Add a vertical divider
+                  ],
+                ),
               ),
             ),
           ],
